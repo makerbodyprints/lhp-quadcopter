@@ -30,6 +30,10 @@ XBEE Dongle:
 
 http://www.ftdichip.com/FTDrivers.htm
 
+X-CTU:
+
+http://www.digi.com/support/productdetail?pid=3352
+
 Motor Reference:
 
 http://rcsunnysky.com/kygood/en/product_more.asp?id=25
