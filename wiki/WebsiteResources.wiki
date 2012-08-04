@@ -26,6 +26,10 @@ http://www.digi.com/products/wireless-wired-embedded-solutions/zigbee-rf-modules
 
 http://www.instructables.com/id/Changing-Xbee-Baud-Rates/
 
+XBEE Dongle:
+
+http://www.ftdichip.com/FTDrivers.htm
+
 Motor Reference:
 
 http://rcsunnysky.com/kygood/en/product_more.asp?id=25
