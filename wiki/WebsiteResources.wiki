@@ -18,6 +18,14 @@ http://code.google.com/p/multiwii/
 
 http://www.multiwii.com/
 
+XBEE Pro 60mW Series 1:
+
+https://www.sparkfun.com/products/8690
+
+http://www.digi.com/products/wireless-wired-embedded-solutions/zigbee-rf-modules/point-multipoint-rfmodules/xbee-series1-module#docs
+
+http://www.instructables.com/id/Changing-Xbee-Baud-Rates/
+
 Motor Reference:
 
 http://rcsunnysky.com/kygood/en/product_more.asp?id=25
