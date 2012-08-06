@@ -12,13 +12,13 @@ Add your content here.  Format your content with:
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 
-*bold*Multiwii:
+*Multiwii:*
 
 http://code.google.com/p/multiwii/
 
 http://www.multiwii.com/
 
-*bold*XBEE Pro 60mW Series 1:
+*XBEE Pro 60mW Series 1:*
 
 https://www.sparkfun.com/products/8690
 
@@ -26,14 +26,14 @@ http://www.digi.com/products/wireless-wired-embedded-solutions/zigbee-rf-modules
 
 http://www.instructables.com/id/Changing-Xbee-Baud-Rates/
 
-*bold*XBEE Dongle:
+*XBEE Dongle:*
 
 http://www.ftdichip.com/FTDrivers.htm
 
-*bold*X-CTU:
+*X-CTU:*
 
 http://www.digi.com/support/productdetail?pid=3352
 
-*bold*Motor Reference:
+*Motor Reference:*
 
 http://rcsunnysky.com/kygood/en/product_more.asp?id=25
