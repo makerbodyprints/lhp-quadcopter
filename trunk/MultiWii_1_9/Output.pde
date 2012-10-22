@@ -8,14 +8,6 @@ uint8_t PWM_PIN[8] = {MOTOR_ORDER};
 //TODO:
 //volatile uint8_t atomicServo[4] = {125,125,125,125};
 
-/*
-//for HEX Y6 and HEX6/HEX6X flat and for promini
-volatile uint8_t atomicPWM_PIN5_lowState;
-volatile uint8_t atomicPWM_PIN5_highState;
-volatile uint8_t atomicPWM_PIN6_lowState;
-volatile uint8_t atomicPWM_PIN6_highState;
-*/
-
 void writeMotors() { // [1000;2000] => [125;250]
     for(uint8_t i=0;i<min(NUMBER_MOTOR,4);i++)
       analogWrite(PWM_PIN[i], motor[i]>>3);
