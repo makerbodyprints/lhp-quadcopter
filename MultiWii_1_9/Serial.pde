@@ -32,7 +32,12 @@ void serialCom() {
   uint8_t i;
 
   uint16_t intPowerMeterSum, intPowerTrigger1;   
-
+//these are defined in MultiWii_1_9 source
+//#define ROLL       0
+//#define PITCH      1
+//#define YAW        2
+//#define THROTTLE   3
+//#define AUX1       4
   if ((!tx_busy) && Serial.available()) {
     switch (Serial.read()) {
     #ifdef BTSERIAL

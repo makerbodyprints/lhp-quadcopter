@@ -2,6 +2,11 @@
   #define PROMINI
 #endif
 
+// We are replacing bluetooth with XBEE, uncomment to enable serial bluetooth configuration as controller
+// if this is defined, we can't use the configuration tool
+// first use configuration tool as necessary, then come back and enable btserial 
+//#define BTSERIAL
+
 #if defined(PROMINI)
   #define LEDPIN_PINMODE             pinMode (13, OUTPUT);
   #define LEDPIN_TOGGLE              PINB |= 1<<5;     //switch LEDPIN state (digital PIN 13)

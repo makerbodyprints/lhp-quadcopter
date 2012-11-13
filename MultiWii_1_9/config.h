@@ -104,7 +104,7 @@
 //#define SPEKTRUM 1024
 //#define SPEKTRUM 2048
 
-
+//TODO: Get rid of this, but find out where it's used first (and rid of those too)
 /* EXPERIMENTAL !!
    contribution from Captain IxI and Zaggo
    cf http://www.multiwii.com/forum/viewtopic.php?f=7&t=289
@@ -132,6 +132,7 @@
   As with the SPEKTRUM option, is not possible to use the configuration tool on a mini or promini. */
 //#define BTSERIAL
 
+//TODO: I don't think we need this...
 /* The following lines apply only for a pitch/roll tilt stabilization system
    On promini board, it is not compatible with config with 6 motors or more
    Uncomment the first line to activate it */
@@ -171,9 +172,11 @@
 /* This is the speed of the serial interface. 115200 kbit/s is the best option for a USB connection.*/
 #define SERIAL_COM_SPEED 115200
 
+//TODO: uncomment if we want to use LCD
+// this is commented out in multiwii_1_9 source file as well, will need to be enabled
 /* In order to save space, it's possibile to desactivate the LCD configuration functions
    comment this line only if you don't plan to used a LCD */
-#define LCD_CONF
+//#define LCD_CONF
 
 /* motors will not spin when the throttle command is in low position
    this is an alternative method to stop immediately the motors */
@@ -182,18 +185,16 @@
 /* some radios have not a neutral point centered on 1500. can be changed here */
 #define MIDRC 1500
 
+//TODO: I don't think we'll ever use this...
 /* experimental
    camera trigger function : activated via Rc Options in the GUI, servo output=A2 on promini */
 //#define CAMTRIG
+/*
 #define CAM_SERVO_HIGH 2000  // the position of HIGH state servo
 #define CAM_SERVO_LOW 1020   // the position of LOW state servo
 #define CAM_TIME_HIGH 1000   // the duration of HIGH state servo expressed in ms
 #define CAM_TIME_LOW 1000    // the duration of LOW state servo expressed in ms
-
-/* you can change the tricopter servo travel here */
-#define TRI_YAW_CONSTRAINT_MIN 1020
-#define TRI_YAW_CONSTRAINT_MAX 2000
-#define TRI_YAW_MIDDLE 1500
+*/
 
 /* enable monitoring of the power consumption from battery (think of mAh) */
 /* allows to set alarm value in GUI or via LCD */
