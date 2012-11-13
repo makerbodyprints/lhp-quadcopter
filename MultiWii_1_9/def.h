@@ -112,6 +112,6 @@
   #endif
 #endif
 
-#elif defined(QUADX)
+#if defined(QUADX)
   #define MULTITYPE 3
 #endif
