@@ -11,38 +11,18 @@ void computeIMU () {
   //we separate the 2 situations because reading gyro values with a gyro only setup can be acchieved at a higher rate
   //gyro+nunchuk: we must wait for a quite high delay betwwen 2 reads to get both WM+ and Nunchuk data. It works with 3ms
   //gyro only: the delay to read 2 consecutive values can be reduced to only 0.65ms
-  if (!ACC && nunchuk) {
-    annexCode();
-    while((micros()-timeInterleave)<INTERLEAVING_DELAY) ; //interleaving delay between 2 consecutive reads
-    timeInterleave=micros();
-    WMP_getRawADC();
-    getEstimatedAttitude(); // computation time must last less than one interleaving delay
-    #if BARO
-      getEstimatedAltitude();
-    #endif 
-    while((micros()-timeInterleave)<INTERLEAVING_DELAY) ; //interleaving delay between 2 consecutive reads
-    timeInterleave=micros();
-    while(WMP_getRawADC() != 1) ; // For this interleaving reading, we must have a gyro update at this point (less delay)
-
-    for (axis = 0; axis < 3; axis++) {
-      // empirical, we take a weighted value of the current and the previous values
-      // /4 is to average 4 values, note: overflow is not possible for WMP gyro here
-      gyroData[axis] = (gyroADC[axis]*3+gyroADCprevious[axis]+2)/4;
-      gyroADCprevious[axis] = gyroADC[axis];
-    }
-  } else {
     if (ACC) {
       ACC_getADC();
       getEstimatedAttitude();
       if (BARO) getEstimatedAltitude();
     }
-    if (GYRO) Gyro_getADC(); else WMP_getRawADC();
+    if (GYRO) Gyro_getADC();
     for (axis = 0; axis < 3; axis++)
       gyroADCp[axis] =  gyroADC[axis];
     timeInterleave=micros();
     annexCode();
     while((micros()-timeInterleave)<650) ; //empirical, interleaving delay between 2 consecutive reads
-    if (GYRO) Gyro_getADC(); else WMP_getRawADC();
+    if (GYRO) Gyro_getADC();
     for (axis = 0; axis < 3; axis++) {
       gyroADCinter[axis] =  gyroADC[axis]+gyroADCp[axis];
       // empirical, we take a weighted value of the current and the previous values
@@ -50,7 +30,7 @@ void computeIMU () {
       gyroADCprevious[axis] = gyroADCinter[axis]/2;
       if (!ACC) accADC[axis]=0;
     }
-  }
+  
   #if defined(TRI)
     gyroData[YAW] = (gyroYawSmooth*2+gyroData[YAW]+1)/3;
     gyroYawSmooth = gyroData[YAW];

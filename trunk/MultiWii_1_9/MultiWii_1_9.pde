@@ -350,9 +350,12 @@ void loop () {
       } else if (rcData[YAW] > MAXCHECK && rcData[PITCH] > MAXCHECK && armed == 0) {
         if (rcDelayCommand == 20) {
           servo[0] = 1500; //we center the yaw gyro in conf mode
+          //TODO: LCD stuff
+          /*
           #if defined(LCD_CONF)
             configurationLoop(); //beginning LCD configuration
           #endif
+          */
           previousTime = micros();
         }
       } else if (activate[BOXARM] > 0) {
